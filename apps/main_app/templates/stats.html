@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>new wish</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="my-5">
+        <span> Hello {{ user.first_name }}! These are your stats!</span>
+        <div class="float-right">
+          <a href="/wishes" class="mr-5">DashBoard</a>
+          <a href="/logout">logout</a>
+        </div>
+      </h1>
+      <div class="container">
+        <h3>
+          Total wishes granted so far for all users:
+          {{ all_granted_wishes | length }}
+        </h3>
+        <div class="mt-3">
+          <h5>Your granted wishes: {{ granted_wishes | length }}</h5>
+          <h5>Your pending wishes: {{ pending_wishes | length }}</h5>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
